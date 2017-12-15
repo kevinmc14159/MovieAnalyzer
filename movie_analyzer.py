@@ -13,7 +13,7 @@ class MovieAnalyzer(MRJob):
         ]
 
     def mapper_get_ratings(self, _, line):
-        """Map data into key-value pair of (movieID, 1)."""
+        """Map data into key-value pairs of (movieID, 1)."""
         (userID, movieID, rating, timestamp) = line.split('\t')
         yield movieID, 1
 
